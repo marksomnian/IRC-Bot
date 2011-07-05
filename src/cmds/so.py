@@ -1,9 +1,6 @@
-try:
-    import err
-    import config
-    import stackexchange
-except ImportError:
-    sys.exit(err.load_module)
+import err
+import config
+import stackexchange
 
 def so(command):
     """
