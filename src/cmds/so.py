@@ -1,10 +1,16 @@
+##@file so.py
+#@brief !so \<search term\>
+#@author paullik
+#@ingroup moduleFiles
+
 import stackexchange
 import urllib2
 
-def so(components):
+def so(components): # !so <search term>
     """Search the Stack Overflow site and returns the first question's title and
     URL
 
+    Depends on Stack Exchange API
     """
     response = ''
 
