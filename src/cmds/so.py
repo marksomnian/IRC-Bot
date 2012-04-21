@@ -1,22 +1,15 @@
-##@file so.py
-#@brief !so \<search term\>
-#@author paullik
-#@ingroup moduleFiles
-
 import stackexchange
 import urllib2
 
 def so(components): # !so <search term>
-    """Search the Stack Overflow site and returns the first question's title and
+    '''Search the Stack Overflow site and returns the first question's title and
     URL
-
-    Depends on Stack Exchange API
-    """
+    '''
     response = ''
 
-    terms = components['arguments'].split('!so ') #notice the trailing space
+    terms = components['arguments'].split('!so ') # notice the trailing space
 
-    if 1 == len(terms): #no search term given
+    if 1 == len(terms): # no search term given
         response = 'Usage: !so <search term>'
     else:
         so = stackexchange.Site(stackexchange.StackOverflow, \
