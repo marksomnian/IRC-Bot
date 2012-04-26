@@ -12,23 +12,27 @@ def so(components): # !so <search term>
     if 1 == len(terms): # no search term given
         response = 'Usage: !so <search term>'
     else:
-        so = stackexchange.Site(stackexchange.StackOverflow, \
-                'b2zuVN84_UOdaC3zc8Z5aw')
+        if terms[1].lstrip():
+            so = stackexchange.Site(stackexchange.StackOverflow, \
+                    'b2zuVN84_UOdaC3zc8Z5aw')
 
-        try:
-            qs = so.search(intitle = terms[1].lstrip())
-        except urllib2.HTTPError, e:
-            response = 'The server couldn\'t fulfill the request!'
+            try:
+                qs = so.search(intitle = terms[1].lstrip())
+            except urllib2.HTTPError, e:
+                response = "The server couldn't fulfill the request!"
 
-            if hasattr(e, 'reason'):
-                response = response + '\r\nReason: ' + str(e.reason)
-            elif hasattr(e, 'code'):
-                response = response + '\r\nCode: ' + str(e.code)
-        else:
+                if hasattr(e, 'reason'):
+                    response = response + '\r\nReason: ' + str(e.reason)
 
-            if 1 <= len(qs):
-                response = qs[0].title + '\r\n' + qs[0].url
+                if hasattr(e, 'code'):
+                    response = response + '\r\nCode: ' + str(e.code)
             else:
-                response = 'Not found: ' + terms[1]
 
-    return str(response)
+                if 1 <= len(qs):
+                    response = qs[0].title + '\r\n' + qs[0].url
+                else:
+                    response = 'Not found: ' + terms[1]
+        else:
+            response = 'Usage: !so <search term>'
+
+    return response
