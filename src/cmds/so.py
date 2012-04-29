@@ -21,10 +21,10 @@ def so(components): # !so <search term>
             except urllib2.HTTPError, e:
                 response = "The server couldn't fulfill the request!"
 
-                if hasattr(e, 'reason'):
+                if hasattr(e, 'reason'): # pragma: no branch
                     response = response + '\r\nReason: ' + str(e.reason)
 
-                if hasattr(e, 'code'):
+                if hasattr(e, 'code'): # pragma: no branch
                     response = response + '\r\nCode: ' + str(e.code)
             else:
 
