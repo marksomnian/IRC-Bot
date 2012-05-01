@@ -1,7 +1,7 @@
 import stackexchange
 import urllib2
 
-def so(components): # !so <search term>
+def so(socket, components): # !so <search term>
     '''Search the Stack Overflow site and returns the first question's title and
     URL
     '''
