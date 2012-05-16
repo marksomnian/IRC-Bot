@@ -12,8 +12,6 @@ def so(socket, components): # !so <search term>
     if 1 == len(terms): # no search term given
         response = 'Usage: !so <search term>'
     else:
-        import pdb
-        pdb.set_trace()
         if terms[1].lstrip():
             so = stackexchange.Site(stackexchange.StackOverflow, \
                     'b2zuVN84_UOdaC3zc8Z5aw')
