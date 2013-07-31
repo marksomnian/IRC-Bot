@@ -63,8 +63,8 @@ cmds = {
 # smtp server for email_alert
 smtp_server = 'smtp.gmail.com'
 smtp_port = 25
-from_email_address = 'changeme@gmail.com'
-from_email_password = 'p@s$w0rd'
+from_email_address = 'marksomns@gmail.com'
+from_email_password = 'Thecheeses1'
 
 # users should NOT modify below!
 log = os.path.join(os.getcwd(), '..', 'logs', '')
