@@ -4,29 +4,29 @@ import time
 
 # some commands can be executed only if the user's nick is found in this list
 owner = list(set([
-    'paullik',
-    'foobarfoo',
-    'paullik-test',
+    'marksomnian',
+    'Mikenter',
+    'slowpoke',
 ]))
 
 owner_email = {
-    'foobarfoo': 'foobar@gmail.com',
+    'marksomnian': 'marksp@marksomnian.com',
 }
 
 # server to connect to
-server = 'chat.freenode.net'
+server = 'irc.esper.net'
 # server's port
 port = 6667
 
 # bot's nicknames
-nicks = list(set(['PPyBot']))
+nicks = list(set(['MarksomnianBot']))
 # bot's real name
-real_name = 'Paul Python Bot'
+real_name = "marksomnian's bot"
 
 # channels to join on startup
 channels = list(set([
-    '#ppybbot',
-    '#test-chan',
+    '#FTBServers',
+
 ]))
 
 cmds = {
