@@ -64,7 +64,7 @@ cmds = {
 smtp_server = 'smtp.gmail.com'
 smtp_port = 25
 from_email_address = 'marksomns@gmail.com'
-from_email_password = 'Thecheeses1'
+from_email_password = '' //Removed
 
 # users should NOT modify below!
 log = os.path.join(os.getcwd(), '..', 'logs', '')
